@@ -43,3 +43,6 @@ Y por utlimo tenemos el lenguaje de etiquetado, de estilos y un framework mas:
 
 ### Pagina de login 🔒
 ![image](https://github.com/Uciel89/Portfolio/blob/main/images/Login.png)
+
+### Pagina para edittar 🔧
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/mode_edit.png)
