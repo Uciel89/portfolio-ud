@@ -1,0 +1,12 @@
+<footer class="footer">
+    <div class="footer-body" *ngFor="let persona of personas">
+        <img class="footer-logo" src="../assets/img/logo.png" alt="logo">
+
+        <div class="footer-social">
+            <p><i class='bx bxl-gmail footer-icon'></i> {{persona.email}} </p>
+            <p><i class='bx bx-phone footer-icon'></i> {{persona.celular}} </p>
+            <p><i class='bx bx-home footer-icon'></i> {{persona.domicilio}} </p>
+        </div>
+    </div>
+    <p>&#169; Uciel Daró 2022 copyright all right reserved</p>
+</footer>

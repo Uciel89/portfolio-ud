@@ -1,0 +1,35 @@
+<section class="experience" id="experience">
+    <!--===/ Titulo de la sección /===-->
+    <div class="projects-title">
+        <h2 class="section-title">Experiencia</h2>
+    </div>
+
+    <!--
+        Contenedores de las experiencias y 
+        barra de separación 
+    -->
+    <div id="experience" class="background-alt">
+        <div id="experience-timeline" *ngFor="let experiencia of experiencias, let i = index">
+            <div class="vtimeline-point">
+                <div class="vtimeline-icon">
+                    <i class='bx bx-map' ></i>
+                </div>
+                <span class="vtimeline-date">{{experiencia.fecha_inicio}} – <br> {{experiencia.fecha_final}}</span>
+                <div class="vtimeline-content" data-date="September 2015 – September 2016">
+                    <h3>{{experiencia.nombre}}</h3>
+                    <h4>{{experiencia.trabajo}}</h4>
+                    <p>
+                        {{experiencia.descripcion}}
+                    </p>
+                    <div class="studies_buttons">
+                        <!--===/ Botones para editar o eliminar un item /===-->
+                        <button *ngIf="isAdmin == true" (click)="modal.onEditExperiencia(i)" class="btn-edit">Editar</button>
+                        <button *ngIf="isAdmin == true" (click)="modal.onDeletedExperiencia(i)" class="btn-delete">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button *ngIf="isAdmin == true" (click)="modal.onNewExperiencia()" type="button" class="btn-flotante"><i class='bx bx-plus open-modal' style='color:#ffffff'></i></button>
+    </div>
+</section>
+<app-modal-experiencia [title]="'Editar experiencia'" #modal></app-modal-experiencia>

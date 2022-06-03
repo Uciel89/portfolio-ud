@@ -1,0 +1,71 @@
+<ng-container *ngIf="show">
+  <div class="modalc">
+    <div class="modalc-content">
+      <!-- Header del modal-->
+      <header class="modalc-header">
+        <h4 class="modalc-title">{{ title }}</h4>
+        <i class="bx bx-x" (click)="show = false"></i>
+      </header>
+      <!-- Contenido del modal-->
+      <div class="modalc-container">
+        <form [formGroup]="personaForm" (ngSubmit)="onSubmit()">
+          <div>
+            <input type="hidden" name="id" formControlName="id" />
+
+            <h4>Nombre</h4>
+            <input
+              type="text"
+              name="nombre"
+              formControlName="nombre"
+              placeholder="nombre"
+              required
+              class="contact-input form-control"
+            />
+            <h4>Apellido</h4>
+            <input
+              type="text"
+              name="apellido"
+              formControlName="apellido"
+              placeholder="apellido"
+              class="contact-input"
+            />
+            <h4>Domicilio</h4>
+            <input
+              type="text"
+              name="domicilio"
+              formControlName="domicilio"
+              placeholder="domicilio"
+              class="contact-input"
+            />
+            <h4>Celular</h4>
+            <input
+              type="text"
+              name="celular"
+              formControlName="celular"
+              placeholder="celular"
+              class="contact-input"
+            />
+            <h4>Sobre mi</h4>
+            <textarea
+              name="sobre_mi"
+              formControlName="sobre_mi"
+              placeholder="sobre_mi"
+              rows="10"
+              class="contact-input"
+            ></textarea>
+            <h4>Imagen de perfil</h4>
+            <input
+              type="url"
+              name="image"
+              formControlName="url_img"
+              placeholder="Url imagen"
+              class="contact-input"
+            />
+            <!--==/ Botón para guardar los datos /==-->
+            <button type="submit" (click)="refresh()">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ng-container>

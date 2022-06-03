@@ -1,0 +1,21 @@
+<div class="curriculum-title about" id="about" *ngFor="let persona of personas, let i = index" >
+    <!-- IMAGEN DE PERFIL -->
+    <div class="profile-img">
+        <img src="{{persona.url_img}}" alt="perfil">  
+    </div>
+    
+    <!-- Redes Sociales -->
+    <div class="redes">
+        <a class="redes-icon" href="https://www.instagram.com/uciel67/?hl=es-la"><i class='bx bxl-instagram' id="instagram"></i></a>
+        <a class="redes-icon" href="https://wa.me/5493412683377"><i class='bx bxl-whatsapp' style='color:#04ff00'></i></a>
+    </div>
+
+    <h2 class="section-title">Sobre Mi</h2>
+    <p *ngFor="let persona of personas">
+        {{persona.sobre_mi}}
+    </p>
+
+    <button *ngIf="isAdmin == true" class="btn-edit" (click)="modal.onEditPersona(i)">Editar</button>
+</div>
+
+<app-modal [title]="'Editar persona'" #modal></app-modal>

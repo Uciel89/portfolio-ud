@@ -1,0 +1,47 @@
+<ng-container *ngIf="show">
+  <div class="modalc">
+    <div class="modalc-content">
+      <!-- Header del modal-->
+      <header class="modalc-header">
+        <h4 class="modalc-title">{{ title }}</h4>
+        <i class="bx bx-x" (click)="show = false"></i>
+      </header>
+      <!-- Contenido del modal-->
+      <div class="modalc-container">
+        <form [formGroup]="habilidadForm" (ngSubmit)="onSubmit()">
+          <div>
+            <input type="hidden" name="id" formControlName="id" />
+
+            <h4>Nombre</h4>
+            <input
+              type="text"
+              name="nombre"
+              formControlName="nombre"
+              placeholder="nombre"
+              required
+              class="contact-input form-control"
+            />
+            <h4>Porcentaje</h4>
+            <input
+              type="text"
+              name="porcentaje"
+              formControlName="porcentaje"
+              placeholder="porcentaje"
+              class="contact-input"
+            />
+            <h4>Logo de la habilidad</h4>
+            <input
+              type="url"
+              name="url_logo"
+              formControlName="url_logo"
+              placeholder="Url imagen"
+              class="contact-input"
+            />
+            <!--==/ Botón para guardar los datos /==-->
+            <button type="submit" (click)="refresh()">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ng-container>

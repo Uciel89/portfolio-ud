@@ -1,0 +1,25 @@
+<section class="skills" id="skills">
+    <h2 class="section-title">Habilidades</h2>
+    
+    <div class="skills-data" *ngFor="let habilidad of habilidades, let i = index">
+        <div class="skills-name">
+            <!--<i class='bx bxl-html5 skills-icon' style='color:#f59809'  ></i>-->
+            <img class="skills-icon" [src]="habilidad.url_logo"/>
+            <span class="skills-name">{{habilidad.nombre}}</span>
+        </div>
+        <div class="studies_buttons">
+            <!--===/ Botones para editar o eliminar un item /===-->
+            <button style="font-size: 1rem;" *ngIf="isAdmin == true" (click)="modal.onEditHabilidad(i)" class="btn-edit">Editar</button>
+            <button style="font-size: 1rem;" *ngIf="isAdmin == true" (click)="modal.onDeletedHabilidad(i)" class="btn-delete">Eliminar</button>
+        </div>
+        <div>
+            <span class="skills-percentage">{{habilidad.porcentaje}}</span>
+        </div>
+        <div class="skills-bar" [ngStyle]="{'width': skill_bar(habilidad.porcentaje) }"></div>
+    </div>
+    <div class="add_button">
+        <button *ngIf="isAdmin == true" (click)="modal.onNewHabilidad()" type="button" class="btn-add"><i class='bx bx-plus open-modal' style='color:#ffffff'></i></button>
+    </div>
+</section>
+
+<app-modal-habilidades [title]="'Editar habilidad'" #modal></app-modal-habilidades>

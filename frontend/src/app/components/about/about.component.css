@@ -1,0 +1,20 @@
+#editImg{
+    background-color: rgb(47, 255, 57);
+    border-radius: 10rem;
+    border: 1em black;
+    font-size: 1em;
+    width: 10rem;
+    color: black;
+    text-align: center;
+    transition: all 300ms ease 0ms;
+    z-index: 99;
+    cursor: pointer;
+}
+
+#editImg:hover {
+    background-color: #4c5055; /* Color de fondo al pasar el cursor */
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+    color: white;
+}
+

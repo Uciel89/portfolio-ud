@@ -1,0 +1,63 @@
+<ng-container *ngIf="show">
+  <div class="modalc">
+    <div class="modalc-content">
+      <!-- Header del modal-->
+      <header class="modalc-header">
+        <h4 class="modalc-title">{{ title }}</h4>
+        <i class="bx bx-x" (click)="show = false"></i>
+      </header>
+      <!-- Contenido del modal-->
+      <div class="modalc-container">
+        <form [formGroup]="experienciaForm" (ngSubmit)="onSubmit()">
+          <div>
+            <input type="hidden" name="id" formControlName="id" />
+
+            <h4>Nombre</h4>
+            <input
+              type="text"
+              name="nombre"
+              formControlName="nombre"
+              placeholder="nombre"
+              required
+              class="contact-input form-control"
+            />
+            <h4>Trabajo</h4>
+            <input
+              type="text"
+              name="trabajo"
+              formControlName="trabajo"
+              placeholder="trabajo"
+              class="contact-input"
+            />
+            <h4>Fecha de inicio</h4>
+            <input
+              type="text"
+              name="fecha_inicio"
+              formControlName="fecha_inicio"
+              placeholder="fecha_inicio"
+              class="contact-input"
+            />
+            <h4>Fecha de final</h4>
+            <input
+              type="text"
+              name="fecha_final"
+              formControlName="fecha_final"
+              placeholder="fecha_final"
+              class="contact-input"
+            />
+            <h4>Descripción</h4>
+            <textarea
+              name="descripcion"
+              formControlName="descripcion"
+              placeholder="descripcion"
+              rows="10"
+              class="contact-input"
+            ></textarea>
+            <!--==/ Botón para guardar los datos /==-->
+            <button type="submit" (click)="refresh()">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ng-container>

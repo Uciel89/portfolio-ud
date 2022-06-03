@@ -1,0 +1,18 @@
+.login {
+  background: url("../../../assets/img/fondo_login.jpg");
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+}
+
+#logo_ud {
+  width: 130px;
+}
+
+#logo_ap {
+  width: 170px;
+}

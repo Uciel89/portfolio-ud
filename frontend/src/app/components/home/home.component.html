@@ -1,0 +1,18 @@
+<section class="home section" id="home">
+    <div class="home-body">
+        <h1 *ngFor="let persona of persona">{{persona.nombre}}  {{persona.apellido}}</h1>
+        <h3>Desarrollador de software</h3>
+        
+        <div class="iconos">
+            <a class="redes-icon" href="https://github.com/Uciel89"><i class='bx bxl-github'></i></a>
+            <a download="Curriculum Uciel Daró" class="redes-icon" href="../../../assets/Documents/Uciel Daró.pdf"><img src="../assets/img/curriculum.png" alt="curriculum"></a>
+            <a class="redes-icon" href="https://www.linkedin.com/in/uciel-dar%C3%B3-12a568223/"><i class='bx bxl-linkedin-square' style='color: #0e76a8'></i></a>
+        </div>
+    </div>    
+
+    <div class="desplazar">
+        <h3>Ver más</h3>
+        <a (click)="toAbout()" style="cursor: pointer;"><i class='bx bx-chevron-down'></i></a> 
+    </div>
+
+</section>

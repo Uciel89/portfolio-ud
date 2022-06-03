@@ -1,0 +1,53 @@
+<header class="primary-header flex">
+    
+    <!-- Logo -->
+    <div>
+        <img src="../assets/img/logo.png" alt="space tourism logo" class="logo">
+    </div>
+  
+    <!-- Menu Toggle -->
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only"></span>
+    </button>
+  
+    <!-- Navegación -->
+    <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+            <li>
+                <a (click)="toHome()" routerLinkActive="active" class="nav-link" style="cursor: pointer;">
+                    <span aria-hidden="true">00</span> Inicio
+                </a>
+            </li>    
+            <li>
+                <a (click)="toAbout()" routerLinkActive="active" class="nav-link" style="cursor: pointer;">
+                    <span aria-hidden="true">01</span> Sobre mi
+                </a>
+            </li> 
+            <li>
+                <a (click)="toExperience()" routerLinkActive="active" class="nav-link" style="cursor: pointer;">
+                    <span aria-hidden="true">01</span> Experiencia
+                </a>
+            </li> 
+            <li>
+                <a (click)="toStudies()" routerLinkActive="active" class="nav-link" style="cursor: pointer;">
+                    <span aria-hidden="true">02</span> Estudios
+                </a>
+            </li> 
+            <li>
+                <a (click)="toDemos()" routerLinkActive="active" class="nav-link" style="cursor: pointer;">
+                    <span aria-hidden="true">03</span> Demos
+                </a>
+            </li> 
+            <li>
+                <a (click)="toSkills()" routerLinkActive="active" class="nav-link" style="cursor: pointer;">
+                    <span aria-hidden="true">04</span> Habilidades
+                </a>
+            </li> 
+            <li>
+                <a (click)="toContact()" routerLinkActive="active" class="nav-link" style="cursor: pointer;">
+                    <span aria-hidden="true">05</span> Contacto
+                </a>
+            </li> 
+        </ul>
+    </nav>
+  </header>

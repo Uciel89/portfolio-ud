@@ -1,0 +1,50 @@
+<!-- ===/ CANVAS /===-->
+<div class="animationMatrix">
+  <canvas id="canvas1"></canvas>
+</div>
+
+<!-- ===/ HEADER /=== -->
+<app-header></app-header>
+
+<!-- ===/ MAIN /=== -->
+<main class="l-main">
+
+  <!-- ===/ Inicio /=== -->
+  <app-inicio></app-inicio>
+
+  <div class="part-2" id="part-2">
+      <section class="about section" id="about">
+
+          <!-- CUERPO DEL CURRICULUM -->
+          <div class="curriculum-body">
+
+              <!-- ===/ SOBRE MI /=== -->
+              <app-sobre-mi></app-sobre-mi>
+
+              <!-- ===/ EXPERIENCIA /=== -->
+              <app-experiencia></app-experiencia>
+
+              <!-- ===/ ESTUDIOS /=== -->
+              <app-studies></app-studies>
+
+              <!-- ===/ PROYECTOS /=== -->
+              <app-proyectos></app-proyectos>
+
+              <!-- ===/ HABILIDADES /=== -->
+              <app-skills></app-skills>
+
+              <!-- ===/ CONTACTO /=== -->
+              <app-contact></app-contact>
+              
+          </div>
+      </section>
+  </div>
+
+  <!-- ====/ FOOTER /==== -->
+  <app-footer></app-footer>
+
+</main>
+
+<a class="btn-flotante-exit"  (click)="onLogOut()"  >
+    <i class='bx bx-exit' style='color:#ffffff' ></i>
+</a>

@@ -1,0 +1,29 @@
+<section class="studies-body" id="studies">
+
+    <div class="curriculum-title">
+        <h2 class="section-title">Estudios</h2>
+        <p *ngFor="let estudio of estudios">{{estudio.sobre_estudio}}</p>
+    </div>
+
+    <!-- ITEMS CON LOS ESTUDIOS -->
+    <div class="studies-element" *ngFor="let estudio of estudios, let i = index">
+        <div class="studies-img">
+            <img [src]="estudio.url_foto" alt="">
+        </div>
+        <div class="studies-item-text">
+            <span><strong>{{estudio.nombre}}</strong> <br> {{estudio.descripcion}} </span>
+        </div>
+
+        <div class="studies_buttons">
+            <!--===/ Botones para editar o eliminar un item /===-->
+            <button *ngIf="isAdmin == true" (click)="modal.onEditEstudio(i)" class="btn-edit">Editar</button>
+            <button *ngIf="isAdmin == true" (click)="modal.onDeletedEstudio(i)" class="btn-delete">Eliminar</button>
+        </div>
+    </div>
+    
+    <div class="add_button">
+        <button *ngIf="isAdmin == true" (click)="modal.onNewExperiencia()" type="button" class="btn-add"><i class='bx bx-plus open-modal' style='color:#ffffff'></i></button>
+    </div>
+</section>
+
+<app-modal-estudios [title]="'Editar estudio'" #modal></app-modal-estudios>

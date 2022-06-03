@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uciel Daró</title>
+
+    <!-- ===/ CSS /=== -->
+    <link rel="stylesheet" href="../template/css/style.css">
+    <link rel="stylesheet" href="../template/css/responsive.css">
+    
+    <!-- ===/ BOXICONS /=== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+    <!-- ===/ Page Loader Spinner /=== -->
+    <div class="container" id="container">
+        <div class="cubo">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+    </div>
+
+    <!-- ===/ CANVAS /===-->
+    <div class="animationMatrix">
+        <canvas id="canvas1"></canvas>
+    </div>
+
+    <!-- ===/ HEADER /=== -->
+    <header class="primary-header flex">
+        <!-- logo -->
+        <div>
+            <img src="./img/logo.png" alt="space tourism logo" class="logo">
+        </div>
+
+        <!-- toggle -->
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only"></span>
+        </button>
+
+        <!-- navegation -->
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                <li>
+                    <a href="#home" class="nav-link">
+                        <span aria-hidden="true">00</span>Inicio
+                    </a>
+                </li>    
+                <li>
+                    <a href="#about" class="nav-link">
+                        <span aria-hidden="true">01</span>Sobre mi
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience" class="nav-link">
+                        <span aria-hidden="true">02</span>Experiencia
+                    </a>
+                </li>
+                <li>
+                    <a href="#studies" class="nav-link">
+                        <span aria-hidden="true">03</span>Estudios
+                    </a>
+                </li>  
+                <li>
+                    <a href="#projects" class="nav-link">
+                        <span aria-hidden="true">04</span>Demos
+                    </a>
+                </li> 
+                <li>
+                    <a href="#skills" class="nav-link">
+                        <span aria-hidden="true">05</span>Habilidades
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link">
+                        <span aria-hidden="true">06</span>Contacto
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===/ MAIN /=== -->
+    <main class="l-main">
+
+        <!-- ===/ Inicio /=== -->
+        <section class="home section" id="home">
+            <div class="home-body">
+                <h1>Uciel Daró</h1>
+                <h3>Desarrollador de software</h3>
+                
+                <div class="iconos">
+                    <a class="redes-icon" href="https://github.com/Uciel89"><i class='bx bxl-github'></i></a>
+                    <a download="Curriculum Uciel Daró" class="redes-icon" href="../template/documents/Uciel Daró.pdf"><img src="../template/img/curriculum.png" alt="curriculum"></a>
+                    <a class="redes-icon" href="https://www.linkedin.com/in/uciel-dar%C3%B3-12a568223/"><i class='bx bxl-linkedin-square' style='color: #0e76a8'></i></a>
+                </div>
+            </div>    
+
+            <div class="desplazar">
+                <h3>Ver más</h3>
+                <a href="#part-2"><i class='bx bx-chevron-down'></i></a>
+            </div>
+        
+        </section>
+
+        <div class="part-2" id="part-2">
+            <section class="section" id="about">
+
+                <!-- CUERPO DEL CURRÍCULUM -->
+                <div class="curriculum-body">
+                    
+                    <!--===/ SOBRE MI /===-->
+                    <section class="curriculum-title about" id="about">
+                        <!-- IMAGEN DE PERFIL -->
+                        <div class="profile-img">
+                            <img src="../template/img/perfil-1.png" alt="perfil">  
+                        </div>
+                        
+                        <!-- Redes Sociales -->
+                        <div class="redes">
+                            <a class="redes-icon" href="https://www.instagram.com/uciel67/?hl=es-la"><i class='bx bxl-instagram' id="instagram"></i></a>
+                            <a class="redes-icon" href="https://wa.me/5493412683377"><i class='bx bxl-whatsapp' style='color:#04ff00'></i></a>
+                        </div>
+                    
+                        <h2 class="section-title">Sobre Mi</h2>
+                        <p *ngFor="let persona of personas">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt culpa, voluptas excepturi minima optio beatae eveniet aliquam repellat quas voluptates provident atque similique corrupti est nisi soluta illum, enim consectetur!
+                        </p>
+                    </section>
+
+                    <!--===/ EXPERIENCIA /===-->
+                    <section class="experience" id="experience">
+                        <!--===/ Titulo de la sección /===-->
+                        <div class="projects-title">
+                            <h2 class="section-title">Experiencia</h2>
+                        </div>
+                    
+                        <!--
+                            Contenedores de las experiencias y 
+                            barra de separación 
+                        -->
+                        <div id="experience" class="background-alt">
+                            <div id="experience-timeline">
+                                <div class="vtimeline-point">
+                                    <div class="vtimeline-icon">
+                                        <i class='bx bx-map' ></i>
+                                    </div>
+                                    <span class="vtimeline-date">Septiembre 2020 – <br> Octubre 2022</span>
+                                    <div class="vtimeline-content" data-date="Septiembre 2020 – Septiembre 2022">
+                                        <h3>Google</h3>
+                                        <h4>Desarrollador Full Stack Web </h4>
+                                        <p>
+                                            Realizaba trabajos de mantenimiento en múltiples aplicaciones web, como google Docs, Meet, etc.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===/ ESTUDIOS /=== -->
+                    <section class="studies-body" id="studies">
+
+                        <div class="curriculum-title">
+                            <h2 class="section-title">Estudios</h2>
+                            <p>Con respecto a los estudios, nunca paró de estudiar la verdad. Pero así es este mundo, cada día sale algo nuevo, una nueva tecnología, una nueva forma de crear algo, etc. Por lo tanto, me encanta seguir aprendiendo todo lo que sea posible de programación, lenguajes, metodologías y más.</p>
+                        </div>
+
+                        <!-- ITEMS CON LOS ESTUDIOS -->
+                        <div class="studies-element">
+                            <div class="studies-img">
+                                <img src="../template/img/studies-img/izo.png" alt="">
+                            </div>
+                            <div class="studies-item-text">
+                                <span><strong>Instituto Zona Oeste</strong> <br> Bachiller en economia</span>
+                            </div>
+                        </div>
+
+                        <div class="studies-element">
+                            <div class="studies-img">
+                                <img src="../template/img/studies-img/edutin.png" alt="">
+                            </div>
+                            <div class="studies-item-text">
+                                <span><strong>Edutin Academy</strong> <br>Diplomado en Kotlin</span>
+                            </div>
+                        </div>
+
+                        <div class="studies-element">
+                            <div class="studies-img">
+                                <img src="../template/img/studies-img/utn.jfif" alt="">
+                            </div>
+                            <div class="studies-item-text">
+                                <span><strong>Centro de e-Learning UTN FRBA</strong> <br>Introduccion a la programacion en Android Kotlin</span>
+                            </div>
+                        </div>
+
+                        <div class="studies-element">
+                            <div class="studies-img">
+                                <img src="../template/img/studies-img/mumuki.png" alt="">
+                            </div>
+                            <div class="studies-item-text">
+                                <span><strong>Mumuki</strong> <br>Argentina Programa Octubre - Diciembre 2021</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===/ PROYECTOS /=== -->
+                    <section class="projects" id="projects">
+                        <div class="projects-title">
+                            <h2 class="section-title">Demos</h2>
+                        </div>
+                        
+                        <div class="projects-flex">
+                            <div class="projects-elements">
+                                <figure class="project-item">
+                                    <img src="../template/img/projects-img/Portfolio.png" alt="portfolio">
+                                    <div class="capa">
+                                        <h3>Portfolio</h3>
+                                        <p>Mi portfolio personal</p>
+                                    </div>
+                                </figure>
+                            </div>
+    
+                            <div class="projects-elements">
+                                <figure class="project-item">
+                                    <img src="../template/img/projects-img/crud-juegos.png" alt="crud-juegos">
+                                    <div class="capa">
+                                        <h3>CRUD - Juegos</h3>
+                                        <p>Aplicación de practica de una aplicacion web</p>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="projects-flex">
+                            <div class="projects-elements">
+                                <figure class="project-item">
+                                    <img src="../template/img/projects-img/data-vehicle.png" alt="data-vehicle">
+                                    <div class="capa">
+                                        <h3>Data Vehicle</h3>
+                                        <p>Futura aplicación de android para inventerio de una concesionaria</p>
+                                    </div>
+                                </figure>
+                            </div>
+    
+                            <div class="projects-elements">
+                                <figure class="project-item">
+                                    <img src="../template/img/projects-img/clima-app.jpeg" alt="clima-app">
+                                    <div class="capa">
+                                        <h3>Clima app</h3>
+                                        <p>Proyecto final del curso de introducción a android en Kotlin</p>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===/ HABILIDADES /=== -->
+                    <section class="skills" id="skills">
+                        <h2 class="section-title">Habilidades</h2>
+                        
+                        <div class="skills-data">
+                            <div class="skills-name">
+                                <!--<i class='bx bxl-html5 skills-icon' style='color:#f59809'  ></i>-->
+                                <img class="skills-icon" src="../template/img/html.png"/>
+                                <span class="skills-name"><p>html</p></span>
+                            </div>
+                            <div>
+                                <span class="skills-percentage">30%</span>
+                            </div>
+                            <div class="skills-bar skills-html"></div>
+                        </div>
+                    </section>
+
+                    <!-- ===/ CONTACTO /=== -->
+                    <section class="contact section" id="contact">
+                        <h2 class="section-title">Contacto</h2>
+            
+                        <div class="contact-container">
+                            <form action="" class="contact-form">
+                                <input type="text" placeholder="Nombre" class="contact-input">
+                                <input type="text" placeholder="Email" class="contact-input">
+                                <textarea name="" id="" cols="0" class="contact-input rows="10"></textarea>
+            
+                                <input type="button" value="Enviar" class="contact-button">
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+
+        <!-- ====/ FOOTER /==== -->
+        <footer class="footer">
+            <div class="footer-body">
+                <img class="footer-logo" src="../template/img/logo.png" alt="logo">
+
+                <div class="footer-social">
+                    <p><i class='bx bxl-gmail footer-icon'></i> ucielporgramador21@gmail.com </p>
+                    <p><i class='bx bx-phone footer-icon'></i> +5493412683377 </p>
+                    <p><i class='bx bx-home footer-icon'></i> Rosario, Santa Fe, Argentina </p>
+                </div>
+            </div>
+            <p>&#169; Uciel Daró 2022 copyright all right reserved</p>
+        </footer>
+    </main>
+    
+    <!-- ===/ SCRIPS /=== -->
+    <script src="js/app.js"></script>
+
+    <script src="js/progressbar.js"></script>
+
+    <script src="js/matrix.js"></script>
+
+    <script src="js/navMobile.js"></script>
+    
+</body>
+</html>

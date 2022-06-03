@@ -1,0 +1,56 @@
+<ng-container *ngIf="show">
+  <div class="modalc">
+    <div class="modalc-content">
+      <!-- Header del modal-->
+      <header class="modalc-header">
+        <h4 class="modalc-title">{{ title }}</h4>
+        <i class="bx bx-x" (click)="show = false"></i>
+      </header>
+      <!-- Contenido del modal-->
+      <div class="modalc-container">
+        <form [formGroup]="estudioForm" (ngSubmit)="onSubmit()">
+          <div>
+            <input type="hidden" name="id" formControlName="id" />
+
+            <h4>Nombre</h4>
+            <input
+              type="text"
+              name="nombre"
+              formControlName="nombre"
+              placeholder="nombre"
+              required
+              class="contact-input form-control"
+            />
+            <h4 *ngIf="sobre_estudios_input == true">Sobre mis estudios</h4>
+            <textarea
+              *ngIf="sobre_estudios_input == true"
+              name="sobre_estudio"
+              formControlName="sobre_estudio"
+              placeholder="sobre_estudio"
+              rows="10"
+              class="contact-input"
+            ></textarea>
+            <h4>Descripción</h4>
+            <textarea
+              name="descripcion"
+              formControlName="descripcion"
+              placeholder="descripcion"
+              rows="5"
+              class="contact-input"
+            ></textarea>
+            <h4>Foto representativa</h4>
+            <input
+              type="url"
+              name="image"
+              formControlName="url_foto"
+              placeholder="url_foto"
+              class="contact-input"
+            />
+            <!--==/ Botón para guardar los datos /==-->
+            <button type="submit" (click)="refresh()">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ng-container>

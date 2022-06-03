@@ -1,0 +1,29 @@
+<div class="projects-title">
+    <h2 class="section-title">Demos</h2>
+</div>
+
+<section class="projects" id="demos">
+    
+    <div class="projects-flex" *ngFor="let demo of demos, let i = index">
+        <div class="projects-elements">
+            <figure class="project-item">
+                <img [src]="demo.url_demo" alt="">
+                <div class="capa">
+                    <h3>{{demo.nombre}}</h3>
+                    <p>{{demo.descripcion}}</p>
+                    <div class="studies_buttons">
+                        <!--===/ Botones para editar o eliminar un item /===-->
+                        <button *ngIf="isAdmin == true" (click)="modal.onEditDemo(i)" class="btn-edit">Editar</button>
+                        <button *ngIf="isAdmin == true" (click)="modal.onDeletedDemo(i)"  class="btn-delete">Eliminar</button>
+                    </div>
+                </div>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<div class="add_button">
+    <button *ngIf="isAdmin == true" (click)="modal.onNewDemo()" type="button" class="btn-add"><i class='bx bx-plus open-modal' style='color:#ffffff'></i></button>
+</div>
+
+<app-modal-demo  [title]="'Editar demo'" #modal></app-modal-demo>
