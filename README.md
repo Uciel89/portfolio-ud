@@ -37,3 +37,9 @@ Y por utlimo tenemos el lenguaje de etiquetado, de estilos y un framework mas:
   - ![image](https://img.icons8.com/color/25/undefined/bootstrap.png) Bootstrap `framework para trabajar con componentes y estilos`
 
 ## Imagenes del portfolio 📷
+
+### Pagina principal 📄
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/Portfolio_1.png)
+
+### Pagina de login 🔒
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/Login.png)
