@@ -63,8 +63,8 @@ Esta aplicación web tiene 3 rutas principales:
  - `http://localhost:4200/portfolio/mode_edit` -> Encontramos el modo edición de la aplicación.
 
 La declaracion de las rutas las podemos encontrar en el archivo `app-rotuing.module.ts`
-``` ts
-onst routes: Routes = [
+``` typescript
+const routes: Routes = [
   {
     path: '',
     redirectTo: '/portfolio',
