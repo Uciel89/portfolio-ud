@@ -46,3 +46,11 @@ Y por utlimo tenemos el lenguaje de etiquetado, de estilos y un framework mas:
 
 ### Pagina para edittar 🔧
 ![image](https://github.com/Uciel89/Portfolio/blob/main/images/mode_edit.png)
+
+## Reconocimientos 📚
+Todos los conocimientos para poder crear este proyecto fueron adquiridos gracias al programa `Argentina programa` etapa `#YoProgramo`.
+> Link del curso: [Argentina programa - #YoProgramo](https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa)
+
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/Ap_log.png)
+
+
