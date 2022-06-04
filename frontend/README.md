@@ -18,7 +18,7 @@ Por otro lado hay que tener en cuenta que tienen que instalar el modulo de node 
 npm i @angular/cli 
 ```
 
-## Estructura del frontend 📦
+## Estructura del frontend 🏗
 En esta sección voy a explicar cada contenido de las carpetas mas importantes dentro del frontend (del proyecto en angular).
 
 ### Componentes
@@ -35,3 +35,27 @@ Aquí podemos encontrar dos archivos muy importante en el apartado de seguridad 
 Los modals (son pantallas emergentes) especificamente en el pagina de edición, justamente para editar los datos del portfolio, agregar y eliminar. `Si, en el modo edición se puede editar, eliminar y agregar datos`. Algo para aclarar es que cada sección dentro del portfolio existe un modal individual.
 
 ![image](https://github.com/Uciel89/Portfolio/blob/main/images/modals.png)
+
+### Models
+En este caso, en la carpeta models podemos encontrar los modelos de datos para interactuar justamente con la base de datos, en cuales al traer los datos de la base de datos mediante el backend, guardamos los datos en estos mismos. Y ademaas vamos a ver dos subcarpetas, una es `db_models` -> estan todos los modelos para los componentes y `security_models` -> encontramos los modelos para el apartado de seguridad.
+
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/models.png)
+
+### Paginas 
+Podremos encontrar las 3 paginas principales de la aplicación web -> `portfolio` `login` `mode_edit`
+
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/paginas.png)
+
+### Servicios
+En este caso encontraremos los archivos de servicio que nos permiten interactuar con nuestro backend atraves de una `API REST`. Estan divididos en subcarpetas, por un lado tenemos `db` -> todos los servicios relacionado a los componentes de las paginas y `security` -> servicios relacionados a la seguridad de la app.
+
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/servicios.png)
+
+### Archivos estaticos
+Podremos ver todos los archivos estaticos del forntend, tanto archivos JS, de estilos (css), imagenes y documentos.
+
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/estaticos.png)
+
+## Rutas de la app 🔎
+
+
