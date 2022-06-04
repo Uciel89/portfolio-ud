@@ -1,27 +1,32 @@
 # Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+Este proyecto esta generado con [Angular CLI](https://github.com/angular/angular-cli) versión 13.2.2.
 
-## Development server
+## Iniciar un servidor local ⚙
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Puedes usar este comando para poder correr el proyecto de forma local. Se va a generar en el puerto `4200`. Ademas hay que tener encuenta las rutas del la aplicación, por lo tanto, la url en la cual van a poder acceder al portfolio es: `http://localhost:4200/portfolio`.
+> El -o te abre automaticamente la pagina en tu navegador predeterminado
+``` 
+ng serve -o 
+```
+o tambien la forma mas simplificada
+```
+ng s -o
+```
+Por otro lado hay que tener en cuenta que tienen que instalar el modulo de node para poder tener angular cli. Entonces en este caso pueden correr el siguiente comando para instar dicho modulo:
+```
+npm i @angular/cli 
+```
 
-## Code scaffolding
+## Estructura del frontend 📦
+En esta sección voy a explicar cada contenido de las carpetas mas importantes dentro del frontend (del proyecto en angular).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Componentes
+En esta carpeta podemos encontrar todos los componentes que componen tanto a la pantalla del portofolio principal como al modo de edicioón, en cada unos de los mismo hay elementos que su visibilidad esta administrada segun si el usuario se logeo dentro de la aplicación (dentron de la pantalla de login).
 
-## Build
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/components.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Guard y Interceptor
+Aquí podemos encontrar dos archivos muy importante en el apartado de seguridad de la aplicación web. El guard nos permite restringir accesor a ciertas rutas de la app y el interceptor es el encargado de recibir el token que ingresamos a la hora de logearnos en la app.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/guard_interceptor.png)
