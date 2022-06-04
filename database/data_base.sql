@@ -1,5 +1,5 @@
 -- MySQL Workbench Synchronization
--- Generated: 2022-05-31 16:23
+-- Generated: 2022-06-04 18:02
 -- Model: New Model
 -- Version: 1.0
 -- Project: Name of the project
@@ -12,7 +12,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Persona` (
-  `idPersona` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_Persona` INT(11) NOT NULL AUTO_INCREMENT,
   `Nombre` VARCHAR(200) NOT NULL,
   `Apellido` VARCHAR(200) NOT NULL,
   `Domicilio` VARCHAR(200) NOT NULL,
@@ -20,70 +20,72 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Persona` (
   `Telefono` VARCHAR(200) NOT NULL,
   `Sobre_mi` VARCHAR(1000) NOT NULL,
   `Url_perfil` VARCHAR(200) NOT NULL,
-  PRIMARY KEY (`idPersona`))
+  PRIMARY KEY (`id_Persona`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Estudio` (
-  `idEstuidos` INT(11) NOT NULL AUTO_INCREMENT,
-  `Sobre_estudios` VARCHAR(45) NOT NULL,
+  `id_Estudio` INT(11) NOT NULL AUTO_INCREMENT,
+  `Sobre_estudios` VARCHAR(200) NOT NULL,
   `Nombre_estudio` VARCHAR(45) NOT NULL,
   `Descripcion_estudio` VARCHAR(200) NOT NULL,
   `Url_estudio` VARCHAR(200) NOT NULL,
   `Persona_idPersona` INT(11) NOT NULL,
-  PRIMARY KEY (`idEstuidos`),
+  PRIMARY KEY (`id_Estudio`),
   INDEX `fk_Estudios_Persona_idx` (`Persona_idPersona` ASC) VISIBLE,
   CONSTRAINT `fk_Estudios_Persona`
     FOREIGN KEY (`Persona_idPersona`)
-    REFERENCES `mydb`.`Persona` (`idPersona`)
+    REFERENCES `mydb`.`Persona` (`id_Persona`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Demo` (
-  `idDemos` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_Demo` INT(11) NOT NULL AUTO_INCREMENT,
   `Nombre_demo` VARCHAR(45) NOT NULL,
   `Descripcion_demo` VARCHAR(200) NOT NULL,
   `Url_demo` VARCHAR(45) NOT NULL,
   `Persona_idPersona` INT(11) NOT NULL,
-  PRIMARY KEY (`idDemos`),
+  PRIMARY KEY (`id_Demo`),
   INDEX `fk_Demos_Persona1_idx` (`Persona_idPersona` ASC) VISIBLE,
   CONSTRAINT `fk_Demos_Persona1`
     FOREIGN KEY (`Persona_idPersona`)
-    REFERENCES `mydb`.`Persona` (`idPersona`)
+    REFERENCES `mydb`.`Persona` (`id_Persona`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Habilidad` (
-  `idHabilidades` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_Habilidad` INT(11) NOT NULL AUTO_INCREMENT,
   `Nombre_habilidad` VARCHAR(45) NOT NULL,
-  `Url_logo` VARCHAR(45) NOT NULL,
+  `Porcentaje` VARCHAR(45) NOT NULL,
+  `Url_habilidad` VARCHAR(45) NOT NULL,
   `Persona_idPersona` INT(11) NOT NULL,
-  PRIMARY KEY (`idHabilidades`),
+  PRIMARY KEY (`id_Habilidad`),
   INDEX `fk_Habilidades_Persona1_idx` (`Persona_idPersona` ASC) VISIBLE,
   CONSTRAINT `fk_Habilidades_Persona1`
     FOREIGN KEY (`Persona_idPersona`)
-    REFERENCES `mydb`.`Persona` (`idPersona`)
+    REFERENCES `mydb`.`Persona` (`id_Persona`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Experiencia` (
-  `idexperiencia` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_Experiencia` INT(11) NOT NULL AUTO_INCREMENT,
   `Nombre_experiencia` VARCHAR(100) NOT NULL,
+  `Trabajo` VARCHAR(45) NOT NULL,
+  `Descripcion_experiencia` VARCHAR(45) NOT NULL,
   `Fecha_inicio` VARCHAR(45) NOT NULL,
   `Fecha_final` VARCHAR(45) NULL DEFAULT NULL,
-  `Descripcion_experiencia` VARCHAR(45) NOT NULL,
   `Persona_idPersona` INT(11) NOT NULL,
-  PRIMARY KEY (`idexperiencia`),
+  PRIMARY KEY (`id_Experiencia`),
   INDEX `fk_experiencia_persona1_idx` (`Persona_idPersona` ASC) VISIBLE,
   CONSTRAINT `fk_experiencia_persona1`
     FOREIGN KEY (`Persona_idPersona`)
-    REFERENCES `mydb`.`Persona` (`idPersona`)
+    REFERENCES `mydb`.`Persona` (`id_Persona`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -98,15 +100,15 @@ DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`User` (
   `idUser` INT(11) NOT NULL AUTO_INCREMENT,
-  `User` VARCHAR(45) NOT NULL,
-  `Nombre_user` VARCHAR(45) NOT NULL,
-  `Email_user` VARCHAR(45) NOT NULL,
-  `Password_user` VARCHAR(45) NOT NULL,
+  `Usuario` VARCHAR(45) NOT NULL,
+  `Nombre` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `Password` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idUser`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`User_has_rol` (
+CREATE TABLE IF NOT EXISTS `mydb`.`Usuario_rol` (
   `User_idUser` INT(11) NOT NULL,
   `rol_idRol` INT(11) NOT NULL,
   PRIMARY KEY (`User_idUser`, `rol_idRol`),
