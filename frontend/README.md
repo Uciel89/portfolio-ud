@@ -30,3 +30,8 @@ En esta carpeta podemos encontrar todos los componentes que componen tanto a la 
 Aquí podemos encontrar dos archivos muy importante en el apartado de seguridad de la aplicación web. El guard nos permite restringir accesor a ciertas rutas de la app y el interceptor es el encargado de recibir el token que ingresamos a la hora de logearnos en la app.
 
 ![image](https://github.com/Uciel89/Portfolio/blob/main/images/guard_interceptor.png)
+
+### Modals
+Los modals (son pantallas emergentes) especificamente en el pagina de edición, justamente para editar los datos del portfolio, agregar y eliminar. `Si, en el modo edición se puede editar, eliminar y agregar datos`. Algo para aclarar es que cada sección dentro del portfolio existe un modal individual.
+
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/modals.png)
