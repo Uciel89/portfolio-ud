@@ -57,5 +57,33 @@ Podremos ver todos los archivos estaticos del forntend, tanto archivos JS, de es
 ![image](https://github.com/Uciel89/Portfolio/blob/main/images/estaticos.png)
 
 ## Rutas de la app 🔎
+Esta aplicación web tiene 3 rutas principales:
+ - `http://localhost:4200/portfolio` -> En esta ruta encontramos la pantalla principal. 
+ - `http://localhost:4200/portfolio/login` -> Encontramos la pantalla de login.
+ - `http://localhost:4200/portfolio/mode_edit` -> Encontramos el modo edición de la aplicación.
 
+La declaracion de las rutas las podemos encontrar en el archivo `app-rotuing.module.ts`
+``` ts
+onst routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/portfolio',
+    pathMatch: 'full',
+  },
+  {
+    path: 'portfolio',
+    component: PortfolioComponent,
+  },
+  {
+    path: 'portfolio/login',
+    component: LoginComponent,
+  },
+  {
+    path: 'portfolio/mode_edit',
+    component: ModeEditComponent,
+    canActivate: [guard],
+    data: { expectedRol: ['admin', 'user'] },
+  },
+];
 
+```
