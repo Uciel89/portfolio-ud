@@ -1,24 +1,24 @@
 # Template
 
-Todo proyecto debe empezar por algun lado no ? Bueno, esta es la plantilla en la que se basa mi portfolio (Principalmente la pantalla principal de la aplicación web).
+Todo proyecto debe empezar por algún lado ¿ no ? Bueno, esta es la plantilla en la que se basa mi portfolio (Principalmente la pantalla principal de la aplicación web).
 
 # Secciones del portfolio 🧱
-Las secciones en si las podemos relacionar directamente con la de un curriculum, porque en otras palabras, un portfolio es una especie de curriculum pero digital.
+Las secciones en sí las podemos relacionar directamente con la de un curriculum, porque en otras palabras, un portfolio es una especie de curriculum pero digital.
 Las cuales son las siguiente:
-  - `Inicio` -> Podemos encontrar mi nombre, mi redes de desarrollador y un boton para descargar mi curriculum
-  - `Sobre mi` -> Un poco de mi historia, capasidades y una foto de perfil. Ademas botones para acceder a mis redes sociales
+  - `Inicio` -> Podemos encontrar mi nombre, mi redes de desarrollador y un botón para descargar mi curriculum
+  - `Sobre mi` -> Un poco de mi historia, capacidades y una foto de perfil. Además botones para acceder a mis redes sociales
   - `Experiencia` -> Experiencia laboral
-  - `Educación` -> Encontraras los cursos que e hecho y titulos que e conseguido
+  - `Educación` -> Encontrarás los cursos que e hecho y títulos que e conseguido
   - `Demos` -> Aplicaciones de prueba
   - `Habilidades` -> Conocimiento que e adquirido
   - `Contacto` -> Un formulario para comunicarte con migo
 
-## Caracteristicas importantes 🚧
-Como dato extra y que igualmente se puede apreciar en el contenido de esta carpeta, el template fue creado principalmente con las tecnologias base de cualquier pagina web: `HTML` `CSS` `JavaScript`.
+## Características importantes 🚧
+Como dato extra y que igualmente se puede apreciar en el contenido de esta carpeta, el template fue creado principalmente con las tecnologías base de cualquier página web: `HTML` `CSS` `JavaScript`.
 
-Y ademas añadir que es responsiva, gracias a 
+Y además añadir que es responsiva, gracias a 
 
-## Imagenes del template 📷
+## Imágenes del template 📷
 
 ### Vista desde una pc y/o notebook 
 
