@@ -37,13 +37,18 @@ Las configuraciones relacionadas al apartado son muchas, por lo tanto existe una
 
 ![image](https://github.com/Uciel89/Portfolio/blob/main/images/security_backend.png)
 
+### Email
+Dentro de este paquete podemos encotrar los archivos relacionados a la configuración para poder enviar emails desde el backend, obviamente con un formulario desde el frontend.
+
+![image](https://github.com/Uciel89/Portfolio/blob/main/images/email.png)
+
 
 ## Rutas del backend 🗺
 Hay dos rutas principales al tener en cuenta, la que nos permite hacer el logeo de un usuario almacenado dentro de la base de datos y para generar una usuario
 > Una aclaración importante, no hay una interfaz para generar usuarios por temas de restricción, ya que el usuario normal solo tiene acceso al método GET para ver el contenido del portfolio.
 
 Estas rutas son las siguientes: 
- - `http://localhost:8080/auth/nuevoUsuario`
+ - `http://localhost:8080/auth/newUser`
  - `http://localhost:8080/auth/login`
 
 En el código del controlador los podemos encontrar declarados en estos métodos:
