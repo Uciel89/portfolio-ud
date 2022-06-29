@@ -23,6 +23,7 @@ Todo el sistema se basa en 5 tecnologias:
  - ![image](https://img.icons8.com/color/25/undefined/spring-logo.png) Spring Boot `como framework para el backend`
  - ![image](https://img.icons8.com/fluency/25/undefined/security-shield-green.png) Spring Security `modulo de seguridad de Spring`
  - ![image](https://img.icons8.com/color/25/undefined/java-web-token.png) JWT `estandar para generar tokens de seguridad`
+ - ![image](https://img.icons8.com/fluency/25/000000/reading-confirmation.png) Spring Email `libreria para enviar emails desde el backend`
  - ![image](https://img.icons8.com/color/25/undefined/mysql-logo.png) MySQL `base de datos del proyecto`
 
 Por otra parte es importante mensionar los lenguajes utilizados dentro del proyecto:
