@@ -2,7 +2,7 @@
 
 Este es mi portfolio personal, es mas que un portfolio comun y corriente, si no que es una aplicación web ya que me permite cambiar la gran mayoria de su información mediante una interfas de edición. Espero que lo disfuten porque llevo mucho tiempo de desarrollo.
 
-> Link del portfolio online: 
+> Link del portfolio online: https://uciel-daro.web.app/portfolio
 
 ## Caracteristicas generales del portafolio 🧐
 A nivel muy general podemos encontrar una interfaz moderna, en la cual trate de respetar algunos lineamientos al momento de crear un frontend, como el tamaño de las letas, la paleta de colores, etc. Por otra parte, todas las imagnes que se aprecian bien de internet, hay muy pocas que estan como archivos estaticos dentro del proyecto.
