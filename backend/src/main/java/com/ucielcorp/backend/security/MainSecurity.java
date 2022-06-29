@@ -67,7 +67,8 @@ public class MainSecurity  extends WebSecurityConfigurerAdapter {
                         "/mode_edit/habilidad",
                         "/mode_edit/experiencia",
                         "/mode_edit/estudio",
-                        "/mode_edit/demo"
+                        "/mode_edit/demo",
+                        "/mode_edit/email"
                 ).permitAll()
                 .antMatchers("/auth/**").permitAll()
                 .anyRequest().authenticated()

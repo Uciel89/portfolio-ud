@@ -52,7 +52,7 @@ public class AuthController {
     /**===/ Generar nuevo usuario /===**/
 
     //Espera un json y lo convierte a tipo clase NuevoUsuario
-    @PostMapping("/nuevoUsuario")
+    @PostMapping("/newUser")
     public ResponseEntity<?> nuevoUsuario(@Valid @RequestBody NewUser nuevoUsuario,
                                           BindingResult bindingResult){
         if(bindingResult.hasErrors()){
