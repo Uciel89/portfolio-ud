@@ -51,7 +51,7 @@ En el código del controlador los podemos encontrar declarados en estos métodos
 @CrossOrigin
 public class AuthController {
   ...
-  @PostMapping("/nuevoUsuario")
+  @PostMapping("/newUser")
   public ResponseEntity<?> nuevoUsuario(@Valid @RequestBody NewUser nuevoUsuario,BindingResult bindingResult){...}
 
   @PostMapping("/login")
@@ -59,5 +59,3 @@ public class AuthController {
   ...
 }
 ```
-> En la versión online son diferentes 👀, hago la aclaración.
-
