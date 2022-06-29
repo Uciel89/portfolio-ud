@@ -38,9 +38,10 @@ Los modals (son pantallas emergentes) específicamente en la página de edición
 
 ### Models
 En este caso, en la carpeta models podemos encontrar los modelos de datos para interactuar justamente con la base de datos, en cuales al traer los datos de la base de datos mediante el backend, guardamos los datos en estos mismos. Y además vamos a ver dos subcarpetas:
--`db_models` -> están todos los modelos para los componentes
--`security_models` -> encontramos los modelos para el apartado de seguridad
--`email_models` -> encontramos el modelo de datos el cual esta relacionado a la estructura a de un correo `email` `name` `subject` `body`
+
+- `db_models` -> están todos los modelos para los componentes
+- `security_models` -> encontramos los modelos para el apartado de seguridad
+- `email_models` -> encontramos el modelo de datos el cual esta relacionado a la estructura a de un correo `email` `name` `subject` `body`
 
 ![image](https://github.com/Uciel89/Portfolio/blob/main/images/models.png)
 
@@ -51,9 +52,9 @@ Podremos encontrar las 3 paginas principales de la aplicación web -> `portfolio
 
 ### Servicios
 En este caso encontraremos los archivos de servicio que nos permiten interactuar con nuestro backend a través de una `API REST`. Están divididos en subcarpetas:
--`db` -> todos los servicios relacionados a los componentes de las páginas.
--`security` -> servicios relacionados a la seguridad de la app.
--`email` -> encontramos el servicio que nos permite enviar correos electronicos mediate el formulario de contacto.
+- `db` -> todos los servicios relacionados a los componentes de las páginas.
+- `security` -> servicios relacionados a la seguridad de la app.
+- `email` -> encontramos el servicio que nos permite enviar correos electronicos mediate el formulario de contacto.
 
 ![image](https://github.com/Uciel89/Portfolio/blob/main/images/servicios.png)
 
