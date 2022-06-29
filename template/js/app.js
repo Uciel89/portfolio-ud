@@ -8,9 +8,6 @@ function scrollFunction(){
     }
 }
 
-window.onload = function() {
-    let contenedor = document.getElementById('container');
-
-    contenedor.style.visibility = "hidden";
-    contenedor.style.opacity = "0";
-}
+$(window).on("load", function () {
+    $(".container").fadeOut()
+});
