@@ -507,6 +507,7 @@ canvas {
 
 .contact-input {
   width: 100%;
+  font-family: var(--font-family);
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
   padding: 1rem;
