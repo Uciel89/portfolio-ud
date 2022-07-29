@@ -9,7 +9,7 @@ import { PersonGuardService as guard } from './guards/person-guard.service';
 
 const routes: Routes = [
   {
-    path: '',
+    path: '**',
     redirectTo: '/portfolio',
     pathMatch: 'full',
   },
