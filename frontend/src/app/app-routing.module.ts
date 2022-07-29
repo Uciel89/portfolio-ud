@@ -9,9 +9,9 @@ import { PersonGuardService as guard } from './guards/person-guard.service';
 
 const routes: Routes = [
   {
-    path: '**',
-    redirectTo: '/portfolio',
-    pathMatch: 'full',
+    path: '',
+    redirectTo: 'portfolio',
+    pathMatch: 'full'
   },
   {
     path: 'portfolio',
@@ -26,6 +26,11 @@ const routes: Routes = [
     component: ModeEditComponent,
     canActivate: [guard],
     data: { expectedRol: ['admin', 'user'] },
+  },
+  {
+    path: '**',
+    redirectTo: 'portfolio',
+    pathMatch: 'full'
   },
 ];
 
