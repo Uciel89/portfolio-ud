@@ -97,6 +97,8 @@ export class ModalComponent implements OnInit {
   }
 
   refresh(): void {
-    window.location.reload;
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000)
   }
 }
