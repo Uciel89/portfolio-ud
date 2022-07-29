@@ -77,6 +77,7 @@ export class ModalComponent implements OnInit {
       });
     }
     this.hideModal();
+    this.refresh();
   }
 
   // Método para recurar los datos de la base de datos

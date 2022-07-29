@@ -1,8 +1,6 @@
 export interface Estudio {
   id: number;
 
-  sobre_estudio: string;
-
   nombre: string;
 
   descripcion: string;

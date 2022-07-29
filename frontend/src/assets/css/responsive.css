@@ -37,7 +37,7 @@
 }
 
 /*===/ RESPONSIVE MOBILE /===*/
-@media (max-width: 40em) {
+@media (max-width: 1000px) {
   .primary-navigation {
     --gap: 3em;
     position: fixed;
@@ -99,6 +99,11 @@
     font-size: 13px;
   }
 
+  .studies-img img{
+    width: 50px;
+    height: 45px;
+  }
+
   /* Proyectos */
   .projects {
     display: grid;
@@ -112,8 +117,8 @@
 
   .project-item {
     margin: 0;
-    width: 78vw;
-    height: 30vh;
+    width: auto;
+    height: auto;
   }
 
   .skills-data {
@@ -156,6 +161,7 @@
     */
   .primary-navigation[data-visible="true"] {
     transform: translateX(0%);
+    overflow: scroll;
   }
 
   /* toggle */
@@ -176,6 +182,14 @@
 
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url("../img/cerrar.png");
+  }
+
+  .profile-img{
+    width: 350px;
+  }
+  
+  .section{
+    padding: 3rem;
   }
 }
 
@@ -198,5 +212,19 @@
 @media (max-width: 365px){
   .home{
     height: 110vh
+  }
+}
+
+@media (max-width: 1000px){
+  .project-item{
+    width: 600px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 760px){
+  .project-item{
+    width: auto;
+    height: auto;
   }
 }

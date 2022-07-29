@@ -13,7 +13,6 @@
             <button style="font-size: 1rem;" *ngIf="isAdmin == true" (click)="modal.onDeletedHabilidad(i)" class="btn-delete">Eliminar</button>
         </div>
         <div>
-            <span class="skills-percentage">{{habilidad.porcentaje}}</span>
         </div>
         <div class="skills-bar" [ngStyle]="{'width': skill_bar(habilidad.porcentaje) }"></div>
     </div>

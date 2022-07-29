@@ -1,7 +1,13 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Demo } from '../../models/db_models/demo';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'content-Type': 'application/json',
+  }),
+}
 
 @Injectable({
   providedIn: 'root',
@@ -16,8 +22,8 @@ export class DemoService {
     return this.http.get<Demo[]>(this.url + 'demo');
   }
 
-  createDemo(demo: Demo): Observable<any> {
-    return this.http.post<Demo>(this.url + 'crear_demo', demo);
+  createDemo(demo: Demo, id: number): Observable<any> {
+    return this.http.post<Demo>(this.url + `crear_demo/${id}`, demo, httpOptions);
   }
 
   deleteDemo(id: number): Observable<any> {
@@ -25,6 +31,6 @@ export class DemoService {
   }
 
   updateDemo(demo: Demo): Observable<any> {
-    return this.http.put<any>(this.url + `editar_demo`, demo);
+    return this.http.put<any>(this.url + `editar_demo`, demo, httpOptions);
   }
 }

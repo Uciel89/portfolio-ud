@@ -1,7 +1,13 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Experiencia } from '../../models/db_models/experiencia';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'content-Type': 'application/json',
+  }),
+}
 
 @Injectable({
   providedIn: 'root',
@@ -16,11 +22,8 @@ export class ExperienciaService {
     return this.http.get<Experiencia[]>(this.url + 'experiencia');
   }
 
-  createExperiencia(experiencia: Experiencia): Observable<any> {
-    return this.http.post<Experiencia>(
-      this.url + 'crear_experiencia',
-      experiencia
-    );
+  createExperiencia(experiencia: Experiencia, id: number): Observable<any> {
+    return this.http.post<Experiencia>(this.url + `crear_experiencia/${id}`,experiencia, httpOptions);
   }
 
   deleteExperiencia(id: number): Observable<any> {
@@ -30,6 +33,6 @@ export class ExperienciaService {
   }
 
   updateExperiencia(experiencia: Experiencia): Observable<any> {
-    return this.http.put<any>(this.url + `editar_experiencia`, experiencia);
+    return this.http.put<any>(this.url + `editar_experiencia`, experiencia, httpOptions);
   }
 }

@@ -1,7 +1,13 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Persona } from 'src/app/models/db_models/persona';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'content-Type': 'application/json',
+  }),
+}
 
 @Injectable({
   providedIn: 'root',
@@ -21,7 +27,7 @@ export class PersonaService {
   }
 
   createPersona(persona: Persona): Observable<any> {
-    return this.http.post<Persona>(this.url + 'crear_persona', persona);
+    return this.http.post<Persona>(this.url + 'crear_persona', persona, httpOptions);
   }
 
   deletePersona(id: string | number): Observable<any> {
@@ -29,6 +35,6 @@ export class PersonaService {
   }
 
   updatePersona(persona: Persona): Observable<any> {
-    return this.http.put<any>(this.url + `editar_persona`, persona);
+    return this.http.put<any>(this.url + `editar_persona`, persona, httpOptions);
   }
 }

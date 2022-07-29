@@ -44,7 +44,7 @@ export class ModalExperienciaComponent implements OnInit {
 
   private clearForm() {
     this.experienciaForm.patchValue({
-      id: '20',
+      id: '',
       nombre: '',
       trabajo: '',
       fecha_inico: '',
@@ -80,7 +80,7 @@ export class ModalExperienciaComponent implements OnInit {
 
     if (this.experienciaForm.get('id')?.value == '') {
       this.experienciaService
-        .createExperiencia(experiencia)
+        .createExperiencia(experiencia, 1)
         .subscribe((newExperiencia: Experiencia) => {
           this.experienciaList.push(newExperiencia);
           this.refresh();
@@ -92,6 +92,7 @@ export class ModalExperienciaComponent implements OnInit {
     }
 
     this.hideModal();
+    this.refresh();
   }
 
   onDeletedExperiencia(index: number) {
@@ -99,12 +100,12 @@ export class ModalExperienciaComponent implements OnInit {
 
     if (confirm('Va a eliminar este registro. ¿ Está seguro ?')) {
       this.experienciaService
-        .deleteExperiencia(experiencia.id)
-        .subscribe(() => {
-          this.reloadDate();
-        });
+      .deleteExperiencia(experiencia.id)
+      .subscribe(() => {
+        this.reloadDate();
+      });
+      this.refresh();
     }
-    this.refresh();
   }
 
   // Método para recurar los datos de la base de datos

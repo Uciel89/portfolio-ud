@@ -12,7 +12,6 @@ export class ModalEstudiosComponent implements OnInit {
   @Input() title = '';
 
   public show = false;
-  public sobre_estudios_input = true;
 
   // Variables globales
   estudioList: Estudio[] = [];
@@ -26,7 +25,6 @@ export class ModalEstudiosComponent implements OnInit {
   ) {
     this.estudioForm = this.formBuilder.group({
       id: [''],
-      sobre_estudio: ['', [Validators.required]],
       nombre: ['', [Validators.required]],
       descripcion: ['', [Validators.required]],
       url_foto: ['', [Validators.required]],
@@ -43,8 +41,7 @@ export class ModalEstudiosComponent implements OnInit {
 
   private clearForm() {
     this.estudioForm.setValue({
-      id: '20',
-      sobre_estudio: '',
+      id: '',
       nombre: '',
       descripcion: '',
       url_foto: '',
@@ -59,7 +56,6 @@ export class ModalEstudiosComponent implements OnInit {
   private loadForm(estudio: Estudio) {
     this.estudioForm.setValue({
       id: estudio.id,
-      sobre_estudio: estudio.sobre_estudio,
       nombre: estudio.nombre,
       descripcion: estudio.descripcion,
       url_foto: estudio.url_foto,
@@ -76,20 +72,19 @@ export class ModalEstudiosComponent implements OnInit {
     let estudio: Estudio = this.estudioForm.value;
 
     if (this.estudioForm.get('id')?.value == '') {
-      this.sobre_estudios_input = false;
       this.estudioService
-        .createEstudio(estudio)
+        .createEstudio(estudio, 1)
         .subscribe((newEstudio: Estudio) => {
           this.estudioList.push(newEstudio);
         });
     } else {
-      this.sobre_estudios_input = true;
       this.estudioService.updateEstudio(estudio).subscribe(() => {
         this.reloadDate();
       });
     }
 
     this.hideModal();
+    this.refresh();
   }
 
   onDeletedEstudio(index: number) {
@@ -99,8 +94,8 @@ export class ModalEstudiosComponent implements OnInit {
       this.estudioService.deleteEstudio(estudio.id).subscribe(() => {
         this.reloadDate();
       });
+      this.refresh();
     }
-    this.refresh();
   }
 
   // Método para recurar los datos de la base de datos

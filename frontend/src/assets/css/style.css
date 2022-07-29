@@ -75,6 +75,19 @@ body {
   margin: 0;
 }
 
+body::-webkit-scrollbar{
+  width: 15px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #1ee940;
+  border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+  background: #15a72d;
+}
+
 h1,
 h2,
 p {

@@ -41,7 +41,7 @@ export class ModalHabilidadesComponent implements OnInit {
   /*===/ Configuraciones del formulario /===*/
   private clearForm() {
     this.habilidadForm.setValue({
-      id: '20',
+      id: '',
       nombre: '',
       url_logo: '',
       porcentaje: '',
@@ -73,7 +73,7 @@ export class ModalHabilidadesComponent implements OnInit {
 
     if (this.habilidadForm.get('id')?.value == '') {
       this.habilidadService
-        .createHabilidad(habilidad)
+        .createHabilidad(habilidad, 1)
         .subscribe((newHabilidad: Habilidad) => {
           this.habilidadList.push(newHabilidad);
         });
@@ -84,6 +84,7 @@ export class ModalHabilidadesComponent implements OnInit {
     }
 
     this.hideModal();
+    this.refresh();
   }
 
   onDeletedHabilidad(index: number) {
@@ -93,8 +94,8 @@ export class ModalHabilidadesComponent implements OnInit {
       this.habilidadService.deleteHabilidad(habilidad.id).subscribe(() => {
         this.reloadDate();
       });
+      this.refresh();
     }
-    this.refresh();
   }
 
   // Método para recurar los datos de la base de datos

@@ -19,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ModeEditComponent } from './pages/mode-edit/mode-edit.component';
 import { AboutComponent } from './components/about/about.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { LoaderComponent } from './components/loader/loader.component'
 
 /*===/ Modals /===*/
 import { ModalComponent } from './modals/modal/modal.component';
@@ -45,6 +46,7 @@ import { interceptorProvider } from './interceptors/prod-interceptor.service';
     AboutComponent,
     HeaderComponent,
     ExperienceComponent,
+    LoaderComponent,
 
     //= Componentes de pagina =//
     PortfolioComponent,

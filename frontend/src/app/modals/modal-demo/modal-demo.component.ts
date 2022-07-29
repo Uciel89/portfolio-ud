@@ -41,7 +41,7 @@ export class ModalDemoComponent implements OnInit {
 
   private clearForm() {
     this.demoForm.setValue({
-      id: '20',
+      id: '',
       nombre: '',
       descripcion: '',
       url_demo: '',
@@ -72,7 +72,9 @@ export class ModalDemoComponent implements OnInit {
     let demo: Demo = this.demoForm.value;
 
     if (this.demoForm.get('id')?.value == '') {
-      this.demoService.createDemo(demo).subscribe((newDemo: Demo) => {
+      this.demoService
+      .createDemo(demo, 1)
+      .subscribe((newDemo: Demo) => {
         this.demoList.push(newDemo);
       });
     } else {
@@ -82,6 +84,7 @@ export class ModalDemoComponent implements OnInit {
     }
 
     this.hideModal();
+    this.refresh();
   }
 
   onDeletedDemo(index: number) {
@@ -91,8 +94,8 @@ export class ModalDemoComponent implements OnInit {
       this.demoService.deleteDemo(demo.id).subscribe(() => {
         this.reloadDate();
       });
+      this.refresh();
     }
-    this.refresh();
   }
 
   // Método para recurar los datos de la base de datos
