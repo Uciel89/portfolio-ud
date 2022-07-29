@@ -23,7 +23,7 @@ export class ModeEditComponent implements OnInit {
 
   onLogOut(): void {
     this.tokenService.logOut();
-
-    this.router.navigate(['/portfolio']);
+    this.router.navigate(['/portfolio/login']);
+    window.location.reload();
   }
 }

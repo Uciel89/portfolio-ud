@@ -10,7 +10,7 @@ export class EmailService {
 
   constructor(private http: HttpClient) { }
 
-  url = 'https://portfolio-uciel.herokuapp.com/mode_edit/';
+  url = 'https://localhost:8080/mode_edit/';
 
   sendEmail(email :Email): Observable<any> {
     return this.http.post(this.url + `email`, email);
