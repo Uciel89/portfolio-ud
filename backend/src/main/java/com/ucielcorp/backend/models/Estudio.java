@@ -12,8 +12,6 @@ public class Estudio {
 
     // Columnas
 
-    private String sobre_estudios;
-
     @NotNull
     private String nombre_estudio;
 
@@ -31,14 +29,6 @@ public class Estudio {
 
     public void setId(int id) {
         this.id_Estudio = id;
-    }
-
-    public String getSobre_estudio() {
-        return sobre_estudios;
-    }
-
-    public void setSobre_estudio(String sobre_estudio) {
-        this.sobre_estudios = sobre_estudio;
     }
 
     public String getNombre() {
