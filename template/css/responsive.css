@@ -1,224 +1,230 @@
-@media screen and (max-width: 1400px ) {
-    
+@media screen and (max-width: 1400px) {
     .contact-container {
-        margin-left: 7em;
-        margin-right: 7em;
+      margin-left: 7em;
+      margin-right: 7em;
     }
-
+  
     .studies-element {
-        margin-left: 10rem;
-        margin-right: 10rem;
-    } 
-}
-
-
-
-@media screen and (max-width: 1200px) {
-    
-    .studies-element {
-        margin-left: 6rem;
-        margin-right: 6rem;
+      margin-left: 10rem;
+      margin-right: 10rem;
     }
-}
-
-@media screen and (max-width: 1100px) {
-   
-    .logo-nav{
-        width: 70px;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .studies-element {
+      margin-left: 6rem;
+      margin-right: 6rem;
+    }
+  }
+  
+  @media screen and (max-width: 1100px) {
+    .logo-nav {
+      width: 70px;
     }
     .nav-link {
-        font-size: 0.8rem;
+      font-size: 0.8rem;
     }
-
+  
     .studies-element {
-        margin-left: 3rem;
-        margin-right: 3rem;
+      margin-left: 3rem;
+      margin-right: 3rem;
     }
-
+  
     .contact-container {
-        margin-left: 2em;
-        margin-right: 2em;
+      margin-left: 2em;
+      margin-right: 2em;
     }
-}
-
-/*===/ RESPONSIVE MOBILE /===*/
-@media (max-width: 40em) {
+  }
+  
+  /*===/ RESPONSIVE MOBILE /===*/
+  @media (max-width: 1000px) {
     .primary-navigation {
-        --gap: 3em;
-        position: fixed;
-        inset: 0 0 0 30%;
-        padding: min(30vh, 10rem) 2em;
-        flex-direction: column;
-        z-index: 9;
-
-        transform: translateX(100%);
-
-        /* Animation */
-        transition: transform 350ms ease-out;
+      --gap: 3em;
+      position: fixed;
+      inset: 0 0 0 30%;
+      padding: min(30vh, 10rem) 2em;
+      flex-direction: column;
+      z-index: 9;
+  
+      transform: translateX(100%);
+  
+      /* Animation */
+      transition: transform 350ms ease-out;
     }
-
+  
     .primary-navigation a {
-        font-size: 1.1rem;
+      font-size: 1.1rem;
     }
-
+  
     /*  
-        Si la propiedad data-visible esta activa, realizamos lo siguiente 
-        Esto es mas que nada para poder mover nuestra barra de navegación
-    */
-    .primary-navigation[data-visible="true"]{
-        transform: translateX(0%);
+          Si la propiedad data-visible esta activa, realizamos lo siguiente 
+          Esto es mas que nada para poder mover nuestra barra de navegación
+      */
+    .primary-navigation[data-visible="true"] {
+      transform: translateX(0%);
     }
-
+  
     /* toggle */
     .mobile-nav-toggle {
-        display: block;
-        color: transparent;
-        z-index: 10;
-        position: absolute;
-        background-color: transparent;
-        background-image: url("../img/menu.png");
-        background-repeat:no-repeat;
-        width: 2rem;
-        border: 0;
-        aspect-ratio: 1;
-        top: 2rem;
-        right: 2rem;
+      display: block;
+      color: transparent;
+      z-index: 10;
+      position: absolute;
+      background-color: transparent;
+      background-image: url("../img/menu.png");
+      background-repeat: no-repeat;
+      width: 2rem;
+      border: 0;
+      aspect-ratio: 1;
+      top: 2rem;
+      right: 2rem;
     }
-
-    .mobile-nav-toggle[aria-expanded = "true"]{
-        background-image: url("../img/cerrar.png");
+  
+    .mobile-nav-toggle[aria-expanded="true"] {
+      background-image: url("../img/cerrar.png");
     }
-
-    /* Curriculum */
+  
+    /* Pagina representante de la información del portfolio */
     .part-2 {
-        margin: auto 1em 1em 1em;
+      margin: auto auto 1em auto;
     }
-    
-    #experience-timeline::after{
-        left: 23px;
-    }
-
-    #experience-timeline::before {
-        left: 23px;
-    }
-
-    .vtimeline-date {
-        width: auto;
-        text-align: left;
-        position: relative;
-        margin-bottom: 15px;
-        display: block;
-        margin-left: 70px;
-    }
-
-    .vtimeline-icon {
-        margin-left: 0;
-        background-color: #757575;
-    }
-
-    .vtimeline-content {
-        margin-left: 70px;
-    }
-
+  
     /* Estudios */
     .studies-element {
-        margin-left: 0;
-        margin-right: 0;
+      margin-left: 0;
+      margin-right: 0;
     }
-
+  
     .studies-item-text {
-        font-size: 13px;
+      font-size: 13px;
     }
-
+  
+    .studies-img img{
+      width: 50px;
+      height: 45px;
+    }
+  
     /* Proyectos */
     .projects {
-        padding: 0;
+      display: grid;
+      grid-template-columns: auto;
+      padding: 0;
     }
-
+  
     .projects-flex {
-        flex-direction: column;
+      flex-direction: column;
     }
-
+  
     .project-item {
-        width: auto;
-        height: auto;
-        margin: 0 0 2em 0;
+      margin: 0;
+      width: auto;
+      height: auto;
     }
-
+  
     .skills-data {
-        margin: auto 1rem 3rem 1rem;
+      margin: auto 1rem 3rem 1rem;
     }
-
+  
     /* Contacto */
     .contact {
-        padding: 0;
+      padding: 0;
     }
-
+  
     .contact-container {
-        margin-left: 0;
-        margin-right: 0;
+      margin-left: 0;
+      margin-right: 0;
     }
-}
-
-@media (max-height: 40em) {
+  }
+  
+  @media (max-height: 40em) {
     .primary-navigation {
-        --gap: 3em;
-        position: fixed;
-        inset: 0 0 0 30%;
-        padding: min(30vh, 10rem) 2em;
-        flex-direction: column;
-        z-index: 9;
-
-        transform: translateX(100%);
-
-        /* Animation */
-        transition: transform 350ms ease-out;
+      --gap: 3em;
+      position: fixed;
+      inset: 0 0 0 30%;
+      padding: min(30vh, 10rem) 2em;
+      flex-direction: column;
+      z-index: 9;
+  
+      transform: translateX(100%);
+  
+      /* Animation */
+      transition: transform 350ms ease-out;
     }
-
+  
     .primary-navigation a {
-        font-size: 1.1rem;
+      font-size: 1.1rem;
     }
-
+  
     /*  
-        Si la propiedad data-visible esta activa, realizamos lo siguiente 
-        Esto es mas que nada para poder mover nuestra barra de navegación
-    */
-    
-    .primary-navigation[data-visible="true"]{
-        transform: translateX(0%);
+          Si la propiedad data-visible esta activa, realizamos lo siguiente 
+          Esto es mas que nada para poder mover nuestra barra de navegación
+      */
+    .primary-navigation[data-visible="true"] {
+      transform: translateX(0%);
+      overflow: scroll;
     }
-
+  
     /* toggle */
     .mobile-nav-toggle {
-        display: block;
-        color: transparent;
-        z-index: 10;
-        position: absolute;
-        background-color: transparent;
-        background-image: url("../img/menu.png");
-        background-repeat:no-repeat;
-        width: 2rem;
-        border: 0;
-        aspect-ratio: 1;
-        top: 2rem;
-        right: 2rem;
+      display: block;
+      color: transparent;
+      z-index: 10;
+      position: absolute;
+      background-color: transparent;
+      background-image: url("../img/menu.png");
+      background-repeat: no-repeat;
+      width: 2rem;
+      border: 0;
+      aspect-ratio: 1;
+      top: 2rem;
+      right: 2rem;
     }
-
-    .mobile-nav-toggle[aria-expanded = "true"]{
-        background-image: url("../img/cerrar.png");
+  
+    .mobile-nav-toggle[aria-expanded="true"] {
+      background-image: url("../img/cerrar.png");
     }
-}
-
-@media (min-width: 35em) and (max-width: 55em) {
+  
+    .profile-img{
+      width: 350px;
+    }
+    
+    .section{
+      padding: 3rem;
+    }
+  }
+  
+  @media (min-width: 35em) and (max-width: 55em) {
     .primary-navigation a > span[aria-hidden="true"] {
-        display: none;
+      display: none;
     }
-}
-
-@media (min-width: 35em) {
+  
+  }
+  
+  @media (min-width: 35em) {
     .primary-navigation {
-        --gap: 2rem;
-        padding-block: 2rem;
-        padding-inline: clamp(3rem, 10vw, 10rem);
+      --gap: 2rem;
+      padding-block: 2rem;
+      padding-inline: clamp(3rem, 10vw, 10rem);
     }
-}
+  
+  }
+  
+  @media (max-width: 365px){
+    .home{
+      height: 110vh
+    }
+  }
+  
+  @media (max-width: 1000px){
+    .project-item{
+      width: 600px;
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 760px){
+    .project-item{
+      width: auto;
+      height: auto;
+    }
+  }
