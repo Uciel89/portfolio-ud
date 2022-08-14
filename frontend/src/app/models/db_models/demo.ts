@@ -3,5 +3,6 @@ export interface Demo {
   id: number;
   nombre: string;
   descripcion: string;
+  link_demo: string;
   url_demo: string;
 }

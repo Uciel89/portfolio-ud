@@ -27,6 +27,7 @@ export class ModalDemoComponent implements OnInit {
       id: [''],
       nombre: ['', [Validators.required]],
       descripcion: ['', [Validators.required]],
+      link_demo: ['', [Validators.required]],
       url_demo: ['', [Validators.required]],
     });
   }
@@ -44,6 +45,7 @@ export class ModalDemoComponent implements OnInit {
       id: '',
       nombre: '',
       descripcion: '',
+      link_demo: '',
       url_demo: '',
     });
   }
@@ -58,6 +60,7 @@ export class ModalDemoComponent implements OnInit {
       id: demo.id,
       nombre: demo.nombre,
       descripcion: demo.descripcion,
+      link_demo: demo.link_demo,
       url_demo: demo.url_demo,
     });
   }

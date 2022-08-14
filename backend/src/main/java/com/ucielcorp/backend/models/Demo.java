@@ -15,6 +15,9 @@ public class Demo {
 
     @NotNull
     private String descripcion_demo;
+    
+    @NotNull
+    private String link_demo;
 
     @NotNull
     private String url_demo;
@@ -51,6 +54,14 @@ public class Demo {
 
     public void setUrl_demo(String url_demo) {
         this.url_demo = url_demo;
+    }
+
+    public String getLink_demo() {
+        return link_demo;
+    }
+
+    public void setLink_demo(String link_demo) {
+        this.link_demo = link_demo;
     }
 
 }
