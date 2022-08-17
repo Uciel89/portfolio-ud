@@ -17,7 +17,7 @@
 <body>
 
     <!-- ===/ Page Loader Spinner /=== -->
-    <div class="container" id="onload">
+    <div class="container" id="container">
         <div class="cubo">
             <span></span>
             <span></span>
@@ -212,11 +212,12 @@
                         </div>
                     </section>
 
-                    <!-- ===/ PROYECTOS /=== -->
+                    <!-- ===/ DEMOS /=== -->
+                    <div class="projects-title">
+                        <h2 class="section-title">Demos</h2>
+                    </div>
+                    
                     <section class="projects" id="projects">
-                        <div class="projects-title">
-                            <h2 class="section-title">Demos</h2>
-                        </div>
                         
                         <div class="projects-flex">
                             <div class="projects-elements">
@@ -225,6 +226,7 @@
                                     <div class="capa">
                                         <h3>Portfolio</h3>
                                         <p>Mi portfolio personal</p>
+                                        <a *ngIf="isAdmin != true" [href]="demo.link_demo" class="btn_see">Ver más</a>
                                     </div>
                                 </figure>
                             </div>
@@ -235,6 +237,7 @@
                                     <div class="capa">
                                         <h3>CRUD - Juegos</h3>
                                         <p>Aplicación de practica de una aplicacion web</p>
+                                        <a *ngIf="isAdmin != true" [href]="demo.link_demo" class="btn_see">Ver más</a>
                                     </div>
                                 </figure>
                             </div>
@@ -247,6 +250,7 @@
                                     <div class="capa">
                                         <h3>Data Vehicle</h3>
                                         <p>Futura aplicación de android para inventerio de una concesionaria</p>
+                                        <a *ngIf="isAdmin != true" [href]="demo.link_demo" class="btn_see">Ver más</a>
                                     </div>
                                 </figure>
                             </div>
@@ -257,6 +261,7 @@
                                     <div class="capa">
                                         <h3>Clima app</h3>
                                         <p>Proyecto final del curso de introducción a android en Kotlin</p>
+                                        <a *ngIf="isAdmin != true" [href]="demo.link_demo" class="btn_see">Ver más</a>
                                     </div>
                                 </figure>
                             </div>
@@ -315,8 +320,6 @@
     
     <!-- ===/ SCRIPS /=== -->
     <script src="js/app.js"></script>
-
-    <script src="js/progressbar.js"></script>
 
     <script src="js/matrix.js"></script>
 

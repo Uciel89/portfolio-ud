@@ -326,6 +326,123 @@ canvas {
   margin: auto 3em 2em 3em;
 }
 
+/**===/ EXPERIENCIA /===**/
+#experience{
+  padding: 50px 15px;
+  text-align: center;
+  
+}
+
+#experience-timeline{
+  margin: 30px auto 0 auto;
+  position: relative;
+  max-width: 1000px;
+}
+
+#experience-timeline::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 303px;
+  right: auto;
+  height: 100%;
+  width: 3px;
+  background: rgb(95, 95, 95);
+  z-index: 0;
+}
+
+#experience-timelin::after{
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 40px;
+  background: rgb(66, 66, 66);
+  top: 100%;
+  left: 303px;
+}
+
+.vtimeline-content{
+  margin-left: 350px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 15px;
+  border-radius: 3px;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.vtimeline-content > h3 {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 0;
+}
+
+.vtimeline-content > h4 {
+  font-size: 1.2rem;
+  color: #757575;
+}
+
+.vtimeline-content > p{
+  color: rgb(22, 22, 22);
+}
+
+.vtimeline-point {
+  position: relative;
+  display: block;
+  vertical-align: top;
+  margin-bottom: 30px;
+}
+
+.vtimeline-icon {
+  position: relative;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+  z-index: 99;
+  margin-left: 16rem;
+}
+
+.vtimeline-icon > i{
+  display: block;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+.vtimeline-date {
+  width: 260px;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.btn-flotante {
+  font-size: 30px; /* Cambiar el tamaño de la tipografia */
+  text-transform: uppercase; /* Texto en mayusculas */
+  font-weight: bold; /* Fuente en negrita o bold */
+  color: #ffffff; /* Color del texto */
+  border-radius: 40px; /* Borde del boton */
+  letter-spacing: 2px; /* Espacio entre letras */
+  background-color: #1ee940; /* Color de fondo */
+  padding: 20px; /* Relleno del boton */
+  transition: all 300ms ease 0ms;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  cursor: pointer;
+}
+
+.btn-flotante:hover {
+  background-color: #4c5055; /* Color de fondo al pasar el cursor */
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-7px);
+}
+
+
 /*===/ SOBRE MI /===*/
 .about {
   display: flex;
@@ -444,7 +561,7 @@ canvas {
 /*===/ PROJECTS /===*/
 .projects {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
   padding: 2rem;
 }
 
@@ -642,6 +759,25 @@ canvas {
 .footer-icon {
   font-size: 1.5rem;
   color: #fff;
+}
+
+.btn_see{
+  display: block;
+  padding: 0.7rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  background-color: grey;
+  border-radius: 1rem;
+  color: white ;
+  border: 2px solid black;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+  transition: all 300ms ease 0ms;
+}
+
+.btn_see:hover{
+  background-color: white;
+  color: black;
+  transform: translateY(-7px);
 }
 
 

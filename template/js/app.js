@@ -8,6 +8,9 @@ function scrollFunction(){
     }
 }
 
-$(window).on("load", function () {
-    $(".container").fadeOut()
-});
+window.onload = function() {
+    let contenedor = document.getElementById('container');
+
+    contenedor.style.visibility = "hidden";
+    contenedor.style.opacity = "0";
+}

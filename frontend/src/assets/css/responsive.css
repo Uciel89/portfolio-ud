@@ -134,6 +134,7 @@
     margin-left: 0;
     margin-right: 0;
   }
+
 }
 
 @media (max-height: 40em) {
@@ -227,4 +228,45 @@
     width: auto;
     height: auto;
   }
+}
+
+@media only screen and (max-width: 750px) {
+
+  #experience-timeline::after{
+      left: 23px;
+  }
+
+  #experience-timeline::before {
+      left: 23px;
+  }
+
+  .vtimeline-date {
+      width: auto;
+      text-align: left;
+      position: relative;
+      margin-bottom: 15px;
+      display: block;
+      margin-left: 70px;
+  }
+
+  .vtimeline-icon {
+      margin-left: 0;
+      background-color: #757575;
+  }
+
+  .vtimeline-content {
+      margin-left: 70px;
+  }
+}
+
+
+@media (max-width: 520px){
+  .projects-elements .project-item:hover>.capa h3 {
+    margin-top: 1rem;
+  }
+
+  .projects-elements .project-item .capa p {
+    margin-bottom: 0.5rem;
+  }
+
 }

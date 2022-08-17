@@ -11,11 +11,10 @@
                 <div class="capa">
                     <h3>{{demo.nombre}}</h3>
                     <p>{{demo.descripcion}}</p>
-                    <div class="studies_buttons">
-                        <!--===/ Botones para editar o eliminar un item /===-->
-                        <button *ngIf="isAdmin == true" (click)="modal.onEditDemo(i)" class="btn-edit">Editar</button>
-                        <button *ngIf="isAdmin == true" (click)="modal.onDeletedDemo(i)"  class="btn-delete">Eliminar</button>
-                    </div>
+                    <!--===/ Botones para editar o eliminar un item /===-->
+                    <button *ngIf="isAdmin == true" (click)="modal.onEditDemo(i)" class="btn-edit">Editar</button>
+                    <button *ngIf="isAdmin == true" (click)="modal.onDeletedDemo(i)"  class="btn-delete">Eliminar</button>
+                    <a *ngIf="isAdmin != true" [href]="demo.link_demo" class="btn_see">Ver más</a>
                 </div>
             </figure>
         </div>
