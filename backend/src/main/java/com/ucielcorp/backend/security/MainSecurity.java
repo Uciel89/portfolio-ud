@@ -71,6 +71,7 @@ public class MainSecurity  extends WebSecurityConfigurerAdapter {
                         "/mode_edit/email"
                 ).permitAll()
                 .antMatchers("/auth/**").permitAll()
+                .antMatchers("/swagger-ui/**", "/v3/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
